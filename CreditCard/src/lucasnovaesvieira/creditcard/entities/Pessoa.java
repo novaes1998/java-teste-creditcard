@@ -5,10 +5,12 @@ public class Pessoa {
 	private String nome;
 	private String cpf;
 	protected Cartao cartao;
+	protected Endereco endereco;
 
-	public Pessoa(String nome, String cpf) {
+	public Pessoa(String nome, String cpf, Endereco endereco) {
 		this.nome = nome;
 		this.cpf = cpf;
+		this.endereco = endereco;
 		this.cartao = new Cartao(this);
 	}
 
@@ -23,6 +25,10 @@ public class Pessoa {
 
 	public Cartao getCartao() {
 		return cartao;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
 	}
 	
 	
